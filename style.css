@@ -19,7 +19,8 @@ td {
     border: none;
     border-bottom: 1px solid white; 
     position: relative;
-    padding-left: 20%; 
+    padding-left: 40%; 
+    font-weight: bold;
 }
 
 td:before { 
