@@ -32,9 +32,9 @@ switch (new Date().getDay()) {
 }
 document.getElementById("date").innerHTML = "Happy  " + day;
 var d = new Date(); // Full current date and time
-var n = d.getFullYear() // Just the year (2021)
+// var n = d.getFullYear() // Just the year (2021)
 document.getElementById("update").innerHTML = d;
-document.getElementById("year").innerHTML = n;
+//document.getElementsByClassName("year").innerHTML = n;
 
 function update_table(data,columns) // Create table
 {

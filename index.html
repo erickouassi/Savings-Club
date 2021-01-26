@@ -11,36 +11,24 @@
 <link rel="stylesheet" href="/style.css">
 <!-- import the webpage's javascript file -->
 <script src="/script.js" defer></script>
-
-
+<!-- import the webpage's w3.js file to include html file-->
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 
 <body>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
-<div class="w3-container w3-theme-d2">
-  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
-  <br>
-  <div class="w3-padding w3-center">
-    <a href="index.html">
-    <img class="w3-circle" src="/img_cash.png" alt="avatar" style="width:75%">
-    </a>
-  </div>
-</div>
-<a class="w3-bar-item w3-button" href="/about.html">About</a>
-<a class="w3-bar-item w3-button" href="/profile.html">Profile</a>
-<a class="w3-bar-item w3-button" href="/faq.html">Faq</a>
+<div w3-include-html="navbar.html"></div>
 </nav>
 
 <header class="w3-top w3-bar w3-theme">
-  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
-  <h1 class="w3-bar-item">KOSAG</h1>
+<div w3-include-html="header.html"></div>
 </header>
 
 <div class="w3-container" style="margin-top:90px">
 <hr>
 <p id="date"></p>
     
-    <form name="myForm" required >
+<form name="myForm" required >
   <input id="user_id" type="text" size="20" onfocus="this.value=''" value="0000">
   <input type="button" name="myButton" value="Submit" onclick="callback_data() ; this.disabled=true; this.value='Showing…';">
   <input type="reset" value="Clear" onclick="clear_table(); resetForm(this.form);" >  
@@ -53,10 +41,11 @@
 </div>
 
 <footer class="w3-container w3-bottom w3-theme w3-margin-top">
-   <h3><span id="year"></span> Copyright © Kouassi Savings Group (KoSaG)</h3>
+   <h3 w3-include-html="footer.html"></h3> 
 </footer>
 
 <script>
+  w3.includeHTML();
 </script>
 
 </body>
