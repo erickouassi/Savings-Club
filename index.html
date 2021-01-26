@@ -15,33 +15,28 @@
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 <body>
-
+<!-- navbar template-->
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
-<div w3-include-html="navbar.html"></div>
+<div w3-include-html="templates/navbar.html"></div>
 </nav>
-
+<!-- header template-->
 <header class="w3-top w3-bar w3-theme">
-<div w3-include-html="header.html"></div>
+<div w3-include-html="templates/header.html"></div>
 </header>
-
+<!-- page content-->
 <div class="w3-container" style="margin-top:90px">
 <hr>
 <p id="date"></p>
-    
-<form name="myForm" required >
-  <input id="user_id" type="text" size="20" onfocus="this.value=''" value="0000">
-  <input type="button" name="myButton" value="Submit" onclick="callback_data() ; this.disabled=true; this.value='Showing…';">
-  <input type="reset" value="Clear" onclick="clear_table(); resetForm(this.form);" >  
-</form>
-    <p></p>
+<div w3-include-html="content/myform.html"></div>   
+<p></p>
 <div id="app"></div>
 <p>
  Current visit: <span id="update"></span>
- </p>
+</p>
 </div>
-
+<!-- footer-->
 <footer class="w3-container w3-bottom w3-theme w3-margin-top">
-   <h3 w3-include-html="footer.html"></h3> 
+<div w3-include-html="templates/footer.html"></div> 
 </footer>
 
 <script>

@@ -14,30 +14,23 @@
 <!-- import the webpage's w3.js file to include html file-->
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 
-
-
 <body>
-
+<!-- navbar template-->
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
-<div w3-include-html="navbar.html"></div>
+<div w3-include-html="templates/navbar.html"></div>
 </nav>
-
+<!-- header template-->
 <header class="w3-top w3-bar w3-theme">
-<div w3-include-html="header.html"></div>
+<div w3-include-html="templates/header.html"></div>
 </header>
-
+<!-- page content-->
 <div class="w3-container" style="margin-top:90px">
 <hr>
-<p>Kouassi Savings Group (KoSaG) started in 2016. <br>
-  What started as informal discussions and encouragement let to running of the Savings
-  scheme where we put money away week by week or month by month until we had enough money saved to buy or spend it
-  on what we wanted. <br>
-  Please note: this is a family member only savings group.
- </p>
+<div w3-include-html="content/about.html"></div>
 </div>
-
+<!-- footer-->
 <footer class="w3-container w3-bottom w3-theme w3-margin-top">
-   <h3 w3-include-html="footer.html"></h3> 
+<div w3-include-html="templates/footer.html"></div> 
 </footer>
 
 <script>
